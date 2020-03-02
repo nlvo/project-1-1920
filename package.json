@@ -1,0 +1,19 @@
+{
+  "name": "oba",
+  "version": "1.0.0",
+  "description": "Digital learning space",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c --watch"
+  },
+  "keywords": [
+    "learning",
+    "papers"
+  ],
+  "author": "Lien Vo",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^1.32.0"
+  }
+}
