@@ -17,6 +17,7 @@ const config = {
 async function fetchData(url, config) {
     const response = await fetch(url);
     const jsonData = await response.json();
+    console.log(jsonData)
     const cleanData = data.clean(jsonData);
     return cleanData;
 }
@@ -61,12 +62,11 @@ async function searchName () {
 }
 
 function clearData() {
-    const main = document.querySelector('main');
     const section = document.querySelector('section');
-    section.remove();
-    const newSection = document.createElement('section');
-    newSection.className = 'books';
-    main.appendChild(newSection);
+    while (section.firstChild) {
+        section.removeChild(section.firstChild)
+    }
+    // https://medium.com/front-end-weekly/remove-all-children-of-the-node-in-javascript-968ad8f120eb
 }
 
 button.addEventListener('click', searchName);
