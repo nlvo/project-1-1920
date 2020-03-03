@@ -57,16 +57,7 @@ async function searchName () {
     // console.log(newBooksEndpoint)
 
     const searchResults = await fetchData(newBooksEndpoint, config);
-    clearData();
     render.allBooks(searchResults);
-}
-
-function clearData() {
-    const section = document.querySelector('section');
-    while (section.firstChild) {
-        section.removeChild(section.firstChild)
-    }
-    // https://medium.com/front-end-weekly/remove-all-children-of-the-node-in-javascript-968ad8f120eb
 }
 
 button.addEventListener('click', searchName);

@@ -1,5 +1,5 @@
 // create html element
-const createElement = (jsonData, selector) => {
+function createElement (jsonData, selector) {
     for (const item of jsonData) {
         const className = `.${selector}`;
         const section = document.querySelector(className);
@@ -12,7 +12,7 @@ const createElement = (jsonData, selector) => {
 }
 
 // create detail html element with classname
-const createDetail = (jsonData, selector) => {
+function createDetail (jsonData, selector) {
     const className = `.${selector}`;
     const section = document.querySelector(className);
     
@@ -25,12 +25,22 @@ const createDetail = (jsonData, selector) => {
     section.insertAdjacentHTML('afterbegin', element);
 }
 
+//clean up existing child elements
+function clearElement() {
+    const section = document.querySelector('section');
+    while (section.firstChild) {
+        section.removeChild(section.firstChild)
+    }
+    // https://medium.com/front-end-weekly/remove-all-children-of-the-node-in-javascript-968ad8f120eb
+}
+
 // render overview page
-const allBooks = (data) => {
+function allBooks (data) {
+    clearElement();
     createElement(data, 'books');
 }
 
-const book = (data) => {
+function book (data) {
     createDetail(data, 'books');
 }
 
