@@ -41,6 +41,7 @@ function allBooks (data) {
 }
 
 function book (data) {
+    clearElement();
     createDetail(data, 'books');
 }
 

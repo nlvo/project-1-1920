@@ -7,7 +7,7 @@ const query = 'bloemen';
 const key = '1e19898c87464e239192c8bfe422f280';
 const secret = '4289fec4e962a33118340c888699438d';
 const detail = 'Default';
-const booksEndpoint = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
+let booksEndpoint = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&p=jeugd&output=json`;
 
 const config = {
 	Authorization: `Bearer ${secret}`
@@ -17,7 +17,6 @@ const config = {
 async function fetchData(url, config) {
     const response = await fetch(url);
     const jsonData = await response.json();
-    console.log(jsonData)
     const cleanData = data.clean(jsonData);
     return cleanData;
 }
@@ -45,22 +44,24 @@ async function getBook (id) {
 // Search for books
 const button = document.querySelector('button');
 
-function search () {
+function searchInput () {
     var searchValue = document.querySelector('input').value;
     return searchValue;
 }
 
-async function searchName () {
-
-    const query = search();
+async function searchResults () {
+    const query = searchInput();
     const newBooksEndpoint = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
-    // console.log(newBooksEndpoint)
-
     const searchResults = await fetchData(newBooksEndpoint, config);
-    render.allBooks(searchResults);
+    return searchResults;
 }
 
-button.addEventListener('click', searchName);
+async function getSearchResults(){
+    const results = await searchResults();
+    render.allBooks(results);
+}
+
+button.addEventListener('click', getSearchResults);
 
 export {
     getAllBooks,
