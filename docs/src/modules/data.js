@@ -1,15 +1,29 @@
-function clean (oldData) {
-
+function clean(oldData) {
     let newData = oldData.results;
-    return newData = newData.map((data) => {
+    if (oldData.results) {
+        // console.log(oldData.results.coverimages[0])
+
+        return newData.map((data) => {
+            return {
+                id: data.id,
+                title: data.titles[0],
+                thumbnail: data.coverimages[1],
+                authors: data.authors,
+                isbn: data.isbn
+            }
+        });
+    } else {
+        let data = oldData.record;
         return {
-            id : data.frabl.value,
+            id: data.id,
             title: data.titles[0],
             thumbnail: data.coverimages[1],
-            author: data.author,
+            authors: data.authors,
             isbn: data.isbn
         }
-    });
+    }
 }
 
-export { clean };
+export {
+    clean
+};

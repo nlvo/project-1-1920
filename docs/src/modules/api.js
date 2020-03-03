@@ -2,12 +2,12 @@ import * as data from '../modules/data';
 import * as render from '../modules/render';
 
 const cors = 'https://cors-anywhere.herokuapp.com/';
-const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
+const baseUrl = 'https://zoeken.oba.nl/api/v1/';
 const query = 'bloemen';
 const key = '1e19898c87464e239192c8bfe422f280';
 const secret = '4289fec4e962a33118340c888699438d';
 const detail = 'Default';
-let booksEndpoint = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&p=jeugd&output=json`;
+const endpoint = `${cors}${baseUrl}search/?q=${query}&authorization=${key}&detaillevel=${detail}&output=json`;
 
 const config = {
 	Authorization: `Bearer ${secret}`
@@ -15,23 +15,26 @@ const config = {
 
 // fetch data function
 async function fetchData(url, config) {
-    const response = await fetch(url);
+    const response = await fetch(url, config);
     const jsonData = await response.json();
+    console.log(jsonData)
     const cleanData = data.clean(jsonData);
     return cleanData;
 }
 
 // Get data for the overview page and render
 async function getAllBooks () {
-    const books = await fetchData(booksEndpoint, config);
+    const books = await fetchData(endpoint, config);
+    console.log(books)
     render.allBooks(books);
 }
 
 // fetch data and find the correct books with id
 async function findBook (id) {
+    const booksEndpoint = `${cors}${baseUrl}details/?id=${id}&authorization=${key}&detaillevel=${detail}&p=jeugd&output=json`;
     const books = await fetchData(booksEndpoint, config);
-    const findData = books.find((data) => data.id == id);
-    return findData;
+    // const findData = books.find((data) => data.id == id);
+    return books;
     // https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
 }
 
@@ -51,8 +54,8 @@ function searchInput () {
 
 async function searchResults () {
     const query = searchInput();
-    const newBooksEndpoint = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
-    const searchResults = await fetchData(newBooksEndpoint, config);
+    const searchBooksEndpoint = `${cors}${baseUrl}search/?q=${query}&authorization=${key}&detaillevel=${detail}&output=json`;
+    const searchResults = await fetchData(searchBooksEndpoint, config);
     return searchResults;
 }
 

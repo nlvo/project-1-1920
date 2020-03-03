@@ -6,6 +6,7 @@ const routes = () => {
             api.getAllBooks();
         },
         ':id': function (id) {
+            console.log(id)
             api.getBook(id);
         }
     })
