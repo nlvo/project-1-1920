@@ -18,6 +18,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+main {
+    background-image: url('../img/header.svg');
+}
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -35,41 +39,6 @@ nav ul li {
 nav ul:after {
     content: '';
     flex:1;
-}
-
-section {
-    align-items: baseline;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-article {
-    background-color: var(--primary-000);
-    border-radius: 0.625em;
-    box-shadow: 0 0.125em 1em 0 rgba(33,38,44,0.15);
-    display: flex;
-    margin: 4em 1em;
-    padding: 1em;
-    width: 25%;
-}
-
-article img {
-    object-fit: cover;
-    border-radius: 0.625em;
-    display: flex;
-    height: 14em;
-    margin-top: -3em;
-    min-width: 10em;
-}
-
-article div {
-    align-self: flex-end;
-    padding: 0 1em;
-}
-
-article div h2 {
-    font-size: 1em;
 }
 
 a {
