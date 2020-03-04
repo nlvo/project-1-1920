@@ -13,6 +13,10 @@ const routes = () => {
         'werkstuk' : function(){
             form.setPerson();
             console.log('hi')
+        },
+        'presentatie' : function() {
+            
+            console.log('presentatie')
         }
     })
 }
