@@ -17,7 +17,7 @@ const config = {
 async function fetchData(url, config) {
     const response = await fetch(url, config);
     const jsonData = await response.json();
-    console.log(jsonData)
+    // console.log(jsonData)
     const cleanData = data.clean(jsonData);
     return cleanData;
 }
@@ -25,7 +25,7 @@ async function fetchData(url, config) {
 // Get data for the overview page and render
 async function getAllBooks () {
     const books = await fetchData(endpoint, config);
-    console.log(books)
+    // console.log(books)
     render.allBooks(books);
 }
 

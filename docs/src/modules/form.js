@@ -40,9 +40,9 @@ function getPerson() {
     return data
 }
 
-async function makeAssignment() {
+function makeAssignment() {
     setPerson()
-    const data = await getPerson()
+    const data = getPerson()
 
     const main = document.querySelector('main')
     const html = `
@@ -74,7 +74,7 @@ async function makeAssignment() {
 }
 
 form.addEventListener('submit', function (e) {
-    // e.preventDefault();
+    e.preventDefault();
     makeAssignment();
 
 });
