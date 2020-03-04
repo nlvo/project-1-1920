@@ -6,6 +6,7 @@
 	<title>Learning</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 	<header>
@@ -19,11 +20,52 @@
 			</ul>
 		</nav>
 	</header>
+
+	<form action="">
+		<fieldset>
+			<legend>Persoonlijk informatie</legend>
+			<label for="naam">Naam</label>
+			<input type="text" name="" id="naam">
+			<label for="leeftijd">Leeftijd</label>
+			<input type="number" name="" id="leeftijd">
+			<label for="klas">Klas</label>
+			<input type="text" name="" id="klas">
+			<label for="juf">Naam juf</label>
+			<input type="text" name="" id="juf">
+			<label for="inlever">Inlever datum</label>
+			<input type="text" name="" id="inlever">
+			<input type="submit" value="Submit">
+		</fieldset>
+
+		<fieldset>
+			<legend>Biografie</legend>
+			<label for="titel">Werkstuk title</label>
+			<input type="text" name="" id="titel">
+			<label for="boek-titel">Boek titel</label>
+			<input type="text" name="" id="boek-titel">
+			<label for="auteur">Auteur</label>
+			<input type="text" name="" id="auteur">
+			<label for="jaar-boek">Jaar uitgave</label>
+			<input type="text" name="" id="jaar-boek">
+			<input type="submit" value="Submit">
+		</fieldset>
+
+		<fieldset>
+			<legend>Hoofdstukken</legend>
+			<label for="Inleiding">Inleiding</label>
+			<input type="text" name="" id="Inleiding">
+			<label for="samenvatting">Hoofdstuk 1: Waar gaat dit werkstuk over</label>
+			<input type="text" name="" id="samenvatting">
+			<input type="submit" value="Submit">
+		</fieldset>
+	</form>
+
+
 	<main>
 		<h1>OBA Api</h1>
 		<section class="books"></section>
 	</main>
-
+	<script src="/docs/src/modules/form.js"></script>
 	<script src="js/vendor/routie.js"></script>
 	<script src="js/main.min.js"></script>
 </body>

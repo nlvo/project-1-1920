@@ -97,3 +97,6 @@ button {
     padding: 0.5em 2em;
     line-height: 2em;
 }
+fieldset input{
+    display: block;
+}
