@@ -6,7 +6,10 @@ function createElement (jsonData, selector) {
         section.insertAdjacentHTML('beforeend',
             `<article>
                 <img src="${item.thumbnail}">
-                <a href="#${item.id}"><h2>${item.title}</h2></a>
+                <div>
+                    <a href="#${item.id}"><h2>${item.title}</h2></a>
+                    <p>${item.summaries}</p>
+                </div>
             </article>`);
     }
 }

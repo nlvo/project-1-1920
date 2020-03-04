@@ -9,6 +9,7 @@ function clean(oldData) {
                 title: data.titles[0],
                 thumbnail: data.coverimages[1],
                 authors: data.authors,
+                summaries: data.summaries || '',
                 isbn: data.isbn
             }
         });
@@ -19,6 +20,7 @@ function clean(oldData) {
             title: data.titles[0],
             thumbnail: data.coverimages[1],
             authors: data.authors,
+            summaries: data.summaries || '',
             isbn: data.isbn
         }
     }
