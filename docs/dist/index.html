@@ -10,7 +10,7 @@
 <body>
 
 	<header>
-		<nav>
+		<!-- <nav>
 			<ul>
 				<li>oba</li>
 				<li>
@@ -18,52 +18,51 @@
 					<button>zoeken</button>
 				</li>
 			</ul>
-		</nav>
+		</nav> -->
 	</header>
 
-	<form action="">
-		<fieldset>
-			<legend>Persoonlijk informatie</legend>
-			<label for="name">Naam</label>
-			<input type="text" name="" id="name">
-			<label for="age">Leeftijd</label>
-			<input type="number" name="" id="age">
-			<label for="class">Klas</label>
-			<input type="text" name="" id="class">
-			<label for="teacher">Naam juf</label>
-			<input type="text" name="" id="teacher">
-			<label for="due">Inlever datum</label>
-			<input type="text" name="" id="due">
-			<input type="submit" value="Submit">
-		</fieldset>
-
-		<fieldset>
-			<legend>Biografie</legend>
-			<label for="title">Werkstuk title</label>
-			<input type="text" name="" id="title">
-			<label for="book-title">Boek titel</label>
-			<input type="text" name="" id="book-title">
-			<label for="author">Auteur</label>
-			<input type="text" name="" id="author">
-			<label for="publication">Jaar uitgave</label>
-			<input type="text" name="" id="publication">
-			<input type="submit" value="Submit">
-		</fieldset>
-
-		<fieldset>
-			<legend>Hoofdstukken</legend>
-			<label for="intro">Inleiding</label>
-			<input type="text" name="" id="intro">
-			<label for="summary">Hoofdstuk 1: Waar gaat dit werkstuk over</label>
-			<input type="text" name="" id="summary">
-			<input type="submit" value="Submit">
-		</fieldset>
-	</form>
-
-
 	<main>
-		<h1>OBA Api</h1>
-		<section class="books"></section>
+		<h1>OBA Werkstukkenhelper</h1>
+		<!-- <section class="books"></section> -->
+
+		<form action="">
+			<fieldset>
+				<legend>Voorkant</legend>
+				<label for="name">Naam</label>
+				<input type="text" name="" id="name">
+				<label for="age">Leeftijd</label>
+				<input type="number" name="" id="age">
+				<label for="class">Klas</label>
+				<input type="text" name="" id="class">
+				<label for="teacher">Naam juf</label>
+				<input type="text" name="" id="teacher">
+				<label for="due">Inlever datum</label>
+				<input type="text" name="" id="due">
+				<input type="submit" value="Submit">
+			</fieldset>
+	
+			<fieldset>
+				<legend>Biografie</legend>
+				<label for="title">Werkstuk title</label>
+				<input type="text" name="" id="title">
+				<label for="book-title">Boek titel</label>
+				<input type="text" name="" id="book-title">
+				<label for="author">Auteur</label>
+				<input type="text" name="" id="author">
+				<label for="publication">Jaar uitgave</label>
+				<input type="text" name="" id="publication">
+				<input type="submit" value="Submit">
+			</fieldset>
+	
+			<fieldset>
+				<legend>Hoofdstukken</legend>
+				<label for="intro">Inleiding</label>
+				<input type="text" name="" id="intro">
+				<label for="summary">Hoofdstuk 1: Waar gaat dit werkstuk over</label>
+				<input type="text" name="" id="summary">
+				<input type="submit" value="Submit">
+			</fieldset>
+		</form>
 	</main>
 	<script src="js/vendor/routie.js"></script>
 	<script src="js/main.min.js"></script>

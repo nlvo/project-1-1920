@@ -97,6 +97,40 @@ button {
     padding: 0.5em 2em;
     line-height: 2em;
 }
+
+form {
+    margin: 0 auto;
+    width: 60%;
+}
+
+fieldset {
+    background-color: var(--primary-000);
+    box-shadow: 0 0.125em 0.125em 0 rgba(33,38,44,0.15);
+    border: 0;
+    height: 100vh;
+    padding: 2em;
+    margin: 1em 0;
+}
+
+fieldset legend {
+    float: left;
+    font-size: 2em;
+    font-weight: 600;
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+fieldset label {
+    display: flex;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 1em;
+    width: 100%;
+}
+
 fieldset input{
     display: block;
+    border-bottom: 1px solid var(--primary-200);
+    border-radius: 0;
+    width: 100%;
 }
