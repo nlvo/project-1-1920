@@ -1,42 +1,25 @@
-function inputToLoca(input) {
-    let key = 'input-' + input.id
-    let storedValue = localStorage.getItem(key)
+const personName = document.getElementById('name');
+const personAge = document.getElementById('age');
+let form = document.querySelector('form');
 
-    if (storedValue) {
-        input.value = storedValue
-        input.addEventListener('input', localSetFunction)
+function setPerson () {
+    const person = {
+        name: personName.value,
+        age: personAge.value
     }
+    localStorage.setItem('person', JSON.stringify(person));
+    console.log(localStorage.getItem('person'))
 }
 
-function localSetFunction() {
-    localStorage.setItem(key, input.value)
-}
+// function getPerson() {
 
-const inputElement = document.querySelector('input')
-
-
-
-var inputEmail = document.getElementById("naam");
-localStorage.setItem("naam", inputEmail.value);
-let form = document.querySelector('form')
-form.addEventListener('submit', e => {
-
-    e.preventDefault()
-    console.log(localStorage)
-})
-
-console.log(localStorage)
-// function persistInput(input)
-// {
-//   var key = "input-" + input.id;
-
-//   var storedValue = localStorage.getItem(key);
-
-//   if (storedValue)
-//       input.value = storedValue;
-
-//   input.addEventListener('input', function ()
-//   {
-//       localStorage.setItem(key, input.value);
-//   });
 // }
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    setPerson();
+});
+
+export {
+    setPerson
+}
