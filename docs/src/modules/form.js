@@ -40,7 +40,7 @@ function getPerson() {
     return data
 }
 
-function makeAssignment() {
+function createAssignment() {
     setPerson()
     const data = getPerson()
 
@@ -49,6 +49,7 @@ function makeAssignment() {
     <section class="paper">
     <article class="cover">
         <h1 id="title">${data.title}</h1>
+        <h2>${data.name} || ${data.age}</h2>
         <h2><span>Docent:</span> ${data.teacher}</h2>
         <h2><span>Inleverdatum:</span>${data.due}</h2>
     </article>
@@ -75,7 +76,7 @@ function makeAssignment() {
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    makeAssignment();
+    createAssignment();
 
 });
 
