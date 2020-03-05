@@ -24,6 +24,7 @@ async function fetchData(url, config) {
 
 // Get data for the overview page and render
 async function getAllBooks () {
+    console.log('book')
     const books = await fetchData(endpoint, config);
     // console.log(books)
     render.allBooks(books);

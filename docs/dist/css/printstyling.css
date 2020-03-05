@@ -170,7 +170,7 @@ section.paper{
     z-index: -1;
 }
 
-p {
+.paper p {
     line-height: 1.4em;
     padding: 2em;
     position: relative;
@@ -179,7 +179,7 @@ p {
     left: 1em;
 }
 
-img {
+.paper img {
     border: 1px solid black;
     width: 13em;
     width: 13em;
@@ -187,11 +187,11 @@ img {
     position: relative;
 }
 
-div {
+.paper div {
     page-break-after: always;
 }
 
-div h2 {
+.paper div h2 {
     margin-top: 5cm;
     position: relative;
 }

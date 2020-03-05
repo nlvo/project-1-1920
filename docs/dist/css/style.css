@@ -71,9 +71,14 @@ a:active {
 /* ------------------------------------------
     'pages'
 ------------------------------------------ */
-/* div.active {
+
+.page {
+    display: none;
+}
+
+#home:target {
     display: block;
-} */
+}
 
 #werkstuk:target {
     display: block;
@@ -83,8 +88,44 @@ a:active {
     display: block;
 }
 
-.page {
+/* #print:target + #home,
+#werkstuk:target + #home {
     display: none;
+} */
+
+.books {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.books article {
+    background-color: var(--primary-000);
+    border-radius: 0.625em;
+    box-shadow: 0 0.125em 1em 0 rgba(33,38,44,0.15);
+    display: flex;
+    margin: 4em 1em;
+    padding: 1em;
+    width: 25%;
+}
+
+.books article img {
+    object-fit: cover;
+    border-radius: 0.625em;
+    display: flex;
+    height: 14em;
+    margin-top: -3em;
+    min-width: 10em;
+}
+
+.books article div {
+    align-self: flex-end;
+    padding: 0 1em;
+}
+
+.books article div h2 {
+    font-size: 1em;
 }
 
 /* ------------------------------------------
@@ -127,14 +168,16 @@ fieldset {
     z-index: 2;
     position: relative;
     animation: 0.8s paper-falling;
-    transition: transform 1s ease;
-    transform: translate(3em) rotate(2deg);
+    transition: transform 2s ease;
+    transform: translate(3em) rotate(4deg);
     width: 100%;
 }
 
 
 fieldset legend {
     background-color: var(--blue-500);
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
     color: var(--primary-000);
     text-transform: lowercase;
     font-size: 1.5em;
@@ -145,6 +188,33 @@ fieldset legend {
     right: -2em;
     transform: rotate(90deg);
     transform-origin: bottom;
+    height: 1.36em;
+}
+
+fieldset legend:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 2em .6em;
+    border-color: transparent transparent var(--blue-500) transparent;
+    position: absolute;
+    left: -0.55em;
+    top: 0;
+    border-top-right-radius: 7px;
+}
+
+fieldset legend:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2em 0 0 .6em;
+    border-color: transparent transparent transparent var(--blue-500);
+    top: 0;
+    right: -.55em;
+    position: absolute;
+    border-top-left-radius: 7px;
 }
 
 fieldset label {
@@ -178,14 +248,13 @@ fieldset img {
 }
 
 fieldset:nth-of-type(2) {
+    animation: .8s paper-falling, 1.2s paper-falling-rotate .8s;
     top: 0;
     position: absolute;
     width: 100%;
-}
-
-fieldset:nth-of-type(2) {
     z-index: 0;
     transform: translate(3em) rotate(2deg);
+    transition: transform 1s;
     background-color: var(--primary-300);
 }
 
@@ -194,8 +263,9 @@ fieldset:nth-of-type(2) legend {
     right: -3.5em;
 }
 
-fieldset:not(.show):nth-of-type(2):hover {
-    transform: translate(5em);
+fieldset:not(.show):hover{
+    cursor: pointer;
+    transform: translate(6em) rotate(3deg);
 }
 
 fieldset label[for="title"] {
@@ -212,7 +282,6 @@ fieldset.show {
     /* position: relative; */
     background-color: var(--primary-000);
     transform: none;
-    /* transform: translate(120vh) scale(1); */
     z-index: 2;
 }
 
@@ -228,6 +297,16 @@ fieldset.show:hover {
         transform: scale(1);
     }
 }
+
+@keyframes paper-falling-rotate {
+    0% {
+        transform: translate(0) rotate(0);
+    }
+    100% {
+        transform: translate(3em) rotate(2deg);
+    }
+}
+
 textarea{
     width: 600px;
 	height: 120px;

@@ -3,10 +3,11 @@ import * as form from '../modules/form'
 
 const routes = () => {
     routie({
-        '': function () {
+        'home': function () {
+            console.log('booo')
             api.getAllBooks();
         },
-        '/:id': function (id) {
+        'books/:id': function (id) {
             console.log(id)
             api.getBook(id);
         },

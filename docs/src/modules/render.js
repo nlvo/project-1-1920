@@ -30,7 +30,7 @@ function createDetail (jsonData, selector) {
 
 //clean up existing child elements
 function clearElement() {
-    const section = document.querySelector('section');
+    const section = document.querySelector('.books');
     while (section.firstChild) {
         section.removeChild(section.firstChild)
     }
@@ -39,7 +39,8 @@ function clearElement() {
 
 // render overview page
 function allBooks (data) {
-    clearElement();
+    console.log('uh')
+    // clearElement();
     createElement(data, 'books');
 }
 
