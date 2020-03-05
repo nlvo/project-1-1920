@@ -81,7 +81,7 @@ npm run build
 
 To look up the book this project uses the api to find the one you need. 
 
-## Local storage
+## Print
 
 Creating a paperwork this projects saves everything in localstorage so when finished it will render the page for you. The only thing the user can do is print his or her project. 
 
