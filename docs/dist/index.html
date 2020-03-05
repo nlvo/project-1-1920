@@ -17,49 +17,64 @@
 				<ul>
 					<li>OBA Werkstukkenhelper</li>
 					<li>
-						<a class="next" href="#">husselen/volgende</a>
+						<input type="text" name="" id="" placeholder="zoek je een boek?">
+						<button class="search-button">zoeken</button>
 					</li>
+					<li>
+						<a class="link active" href="#werkstuk">werkstuk maken</a>
+					</li>
+					<li>
+						<a class="link" href="#print">print</a>
+					</li>
+					<!-- <li>
+						<a class="next" href="#">husselen/volgende</a>
+					</li> -->
 				</ul>
 			</nav>
 		</header>
 
-		<form action="">
-			<fieldset class="show">
-				<img src="img/placeholder.png" alt="">
-				<legend class="next">Voorkant</legend>
-				<label for="title">Titel</label>
-				<input type="text" name="" id="title" placeholder="Hoe heet je werkstuk?" required>
-				<label for="name">Naam</label>
-				<input type="text" name="" id="name" placeholder="Wat is jouw naam?" required>
-				<label for="age">Leeftijd</label>
-				<input type="number" name="" id="age" placeholder="Hoe oud ben je?" required>
-				<label for="class">Klas</label>
-				<input type="text" name="" id="class" placeholder="In welke groep zit je?" required>
-				<label for="teacher">Naam juf</label>
-				<input type="text" name="" id="teacher" required>
-				<label for="due">Inlever datum</label>
-				<input type="text" name="" id="due" required>
-			</fieldset>
-	
-			<fieldset>
-				<legend class="previous">Hoofdstukken</legend>
-				<label for="intro">Inleiding</label>
-				<textarea id="intro" required> </textarea>
-				<label for="chapter1">Hoofdstuk 1: Waar gaat dit werkstuk over</label>
-				<textarea id="chapter1" name="message" required> </textarea>
-				<label for="chapter2">Hoofdstuk 2: </label>
-				<textarea id="chapter2" name="message" required> </textarea>
-				<label for="chapter3">Hoofdstuk 3</label>
-				<textarea id="chapter3" name="message" required> </textarea>
-				<label for="chapter4">Hoofdstuk 4</label>
-				<textarea id="chapter4" name="message" required> </textarea>
-				<label for="chapter5">Hoofdstuk 5</label>
-				<textarea id="chapter5" name="message" required> </textarea>
-				<input type="submit" value="Submit">
+		<div class="page" id="werkstuk">
+			<form action="#print">
+				<fieldset class="show">
+					<img src="img/placeholder.png" alt="">
+					<legend class="next">Voorkant</legend>
+					<label for="title">Titel</label>
+					<input type="text" name="" id="title" placeholder="Hoe heet je werkstuk?" required>
+					<label for="name">Naam</label>
+					<input type="text" name="" id="name" placeholder="Wat is jouw naam?" required>
+					<label for="age">Leeftijd</label>
+					<input type="number" name="" id="age" placeholder="Hoe oud ben je?" required>
+					<label for="class">Klas</label>
+					<input type="text" name="" id="class" placeholder="In welke groep zit je?" required>
+					<label for="teacher">Naam juf</label>
+					<input type="text" name="" id="teacher" required>
+					<label for="due">Inlever datum</label>
+					<input type="text" name="" id="due" required>
+				</fieldset>
+		
+				<fieldset>
+					<legend class="previous">Hoofdstukken</legend>
+					<label for="intro">Inleiding</label>
+					<textarea id="intro" required> </textarea>
+					<label for="chapter1">Hoofdstuk 1: Waar gaat dit werkstuk over</label>
+					<textarea id="chapter1" name="message" required> </textarea>
+					<label for="chapter2">Hoofdstuk 2: </label>
+					<textarea id="chapter2" name="message" required> </textarea>
+					<label for="chapter3">Hoofdstuk 3</label>
+					<textarea id="chapter3" name="message" required> </textarea>
+					<label for="chapter4">Hoofdstuk 4</label>
+					<textarea id="chapter4" name="message" required> </textarea>
+					<label for="chapter5">Hoofdstuk 5</label>
+					<textarea id="chapter5" name="message" required> </textarea>
+					<input type="submit" value="opslaan">
+					<a href="#print">printen</a>
 
-			</fieldset>
-		</form>
-		<section class="paper">
+				</fieldset>
+			</form>
+		</div>
+
+		<div class="page" id="print">
+			<section class="paper">
 				<article class="cover">
 					<img src="img/placeholder.png" alt="">
 					<img src="img/placeholder.png" alt="">
@@ -83,7 +98,6 @@
 					<div>
 					<h2>Inleiding</h2>
 					<p>
-	
 						Ik heb mijn werkstuk gemaakt over vuurwerk. Ik vind vuurwerk
 						erg leuk en ik steek zelf ook vuurwerk af met Oud en Nieuw.
 						In dit werkstuk vertel ik wat over de geschiedenis van vuurwerk
@@ -196,9 +210,8 @@
 				</article>
 	
 			</section>
-		<div>
-			<input type="text" name="" id="" placeholder="zoek je een boek?">
-			<button class="search-button">zoeken</button>
+		</div>
+		<div class="page" id="/">
 			<section class="books"></section>
 		</div>
 	</main>

@@ -29,7 +29,7 @@ main {
 }
 
 nav {
-    /* background-color: var(--primary-000); */
+    background-color: var(--primary-000);
     position: relative;
     z-index: 99;
 }
@@ -55,6 +55,10 @@ nav ul:after {
     flex:1;
 }
 
+nav ul li input {
+    background-color: var(--primary-200);
+}
+
 a {
     color: var(--primary-900);
     text-decoration: none;
@@ -62,6 +66,25 @@ a {
 
 a:active {
     color: var(--primary-900);
+}
+
+/* ------------------------------------------
+    'pages'
+------------------------------------------ */
+/* div.active {
+    display: block;
+} */
+
+#werkstuk:target {
+    display: block;
+}
+
+#print:target {
+    display: block;
+}
+
+.page {
+    display: none;
 }
 
 /* ------------------------------------------

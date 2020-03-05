@@ -53,7 +53,7 @@ function createAssignment() {
 
     const main = document.querySelector('main')
     const html = `
-    <section class="paper">
+    <section class="pa2per">
     <article class="cover">
         <h1 id="title">${data.title}</h1>
         <h2>${data.name} || ${data.age}</h2>
@@ -105,11 +105,11 @@ form.addEventListener('submit', function (e) {
 const next = document.querySelector('.next');
 const prev = document.querySelector('.previous');
 
-function prevPage () {
+function prevPage() {
     const fieldsets = document.querySelectorAll('fieldset');
     const fieldset = document.querySelector('.show');
-    if(fieldset.classList.contains('show')) {
-        for(let i = 0; i < fieldsets.length; i++){
+    if (fieldset.classList.contains('show')) {
+        for (let i = 0; i < fieldsets.length; i++) {
             fieldsets[i].classList.toggle('show');
         }
         fieldset.nextElementSibling.classList.add('show');
@@ -120,14 +120,26 @@ next.addEventListener('click', prevPage);
 prev.addEventListener('click', prevPage);
 
 
-export {
-    setPerson
-}
+const links = document.querySelectorAll('.link');
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+        const current = document.getElementsByClassName('active');
+        const currentPage = document.getElementsByClassName('active');
+    
+        // If there's no active class
+        if (current.length > 0) {
+            current[0].classList.remove('active');
+        }
+    
+        // Add the active class to the current/clicked button
+        this.classList.add('active');
+    });
+}  
 
-// const fieldset = document.querySelector('fieldset');
-// // for(let i = 0; i < fieldsets.length; i++) {
-//     if(fieldset.classList.contains('show')) {
-//         fieldset.classList.remove('show');
-//         fieldset.nextElementSibling.classList.add('show');
-//         console.log('bluh')
-//     }
+
+// https://www.w3schools.com/howto/howto_js_active_element.asp
+// link2.addEventListener('click', active);
+
+export {
+    createAssignment
+}

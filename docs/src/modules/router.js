@@ -11,7 +11,7 @@ const routes = () => {
             api.getBook(id);
         },
         'werkstuk' : function(){
-            form.setPerson();
+            // form.getPerson();
             console.log('hi')
         }
     })
