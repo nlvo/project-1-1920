@@ -26,11 +26,7 @@ function inputPerson() {
         class: personClass.value,
         teacher: teacher.value,
         due: dueDate.value,
-        contents: tableOfContents.value,
         title: titleAssignment.value,
-        bookTitle: bookTitle.value,
-        author: bookAuthor.value,
-        publication: bookPublication.value,
         intro: bookIntro.value,
         chapter1: chapter1.value,
         chapter2: chapter2.value,
@@ -106,8 +102,32 @@ form.addEventListener('submit', function (e) {
 
 });
 
+const next = document.querySelector('.next');
+const prev = document.querySelector('.previous');
+
+function prevPage () {
+    const fieldsets = document.querySelectorAll('fieldset');
+    const fieldset = document.querySelector('.show');
+    if(fieldset.classList.contains('show')) {
+        for(let i = 0; i < fieldsets.length; i++){
+            fieldsets[i].classList.toggle('show');
+        }
+        fieldset.nextElementSibling.classList.add('show');
+    }
+}
+
+next.addEventListener('click', prevPage);
+prev.addEventListener('click', prevPage);
 
 
 export {
     setPerson
 }
+
+// const fieldset = document.querySelector('fieldset');
+// // for(let i = 0; i < fieldsets.length; i++) {
+//     if(fieldset.classList.contains('show')) {
+//         fieldset.classList.remove('show');
+//         fieldset.nextElementSibling.classList.add('show');
+//         console.log('bluh')
+//     }

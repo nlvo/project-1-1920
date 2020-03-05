@@ -64,6 +64,10 @@ a:active {
     color: var(--primary-900);
 }
 
+/* ------------------------------------------
+    Form
+------------------------------------------ */
+
 input {
     border: none;
     border-radius: 0.626em;
@@ -88,7 +92,7 @@ form {
 }
 
 fieldset {
-    background-color: var(--primary-000);
+    background-color: var(--primary-300);
     box-shadow: 0 0.125em 0.125em 0 rgba(33,38,44,0.15);
     border: 0;
     border-top: 0.5em solid var(--junior-500);
@@ -97,34 +101,14 @@ fieldset {
     min-height: 100vh;
     padding: 2em;
     margin: 1em 0;
-    transition: 1s ease;
     z-index: 2;
     position: relative;
-}
-
-fieldset:nth-of-type(2),
-fieldset:nth-of-type(3) {
-    top: 0;
-    position: absolute;
+    animation: 0.8s paper-falling;
+    transition: transform 1s ease;
+    transform: translate(3em) rotate(2deg);
     width: 100%;
 }
 
-fieldset:nth-of-type(2) {
-    z-index: 1;
-    transform: rotate(2deg);
-    background-color: var(--primary-200);
-}
-
-fieldset:nth-of-type(3) {
-    z-index: 0;
-    transform: translate(2em) rotate(6deg);
-    background-color: var(--primary-300);
-}
-
-fieldset:nth-of-type(3) legend {
-    top: 4em;
-    right: -3.5em;
-}
 
 fieldset legend {
     background-color: var(--blue-500);
@@ -162,12 +146,25 @@ fieldset img {
     margin: 0 auto;
 }
 
-fieldset:nth-of-type(2):hover {
-    transform: translate(5em);
+fieldset:nth-of-type(2) {
+    top: 0;
+    position: absolute;
+    width: 100%;
 }
 
-fieldset:nth-of-type(3):hover {
-    transform: translate(6em) rotate(2deg);
+fieldset:nth-of-type(2) {
+    z-index: 0;
+    transform: translate(3em) rotate(2deg);
+    background-color: var(--primary-300);
+}
+
+fieldset:nth-of-type(2) legend {
+    top: 4em;
+    right: -3.5em;
+}
+
+fieldset:not(.show):nth-of-type(2):hover {
+    transform: translate(5em);
 }
 
 fieldset label[for="title"] {
@@ -178,4 +175,25 @@ fieldset label[for="title"] {
     font-size: 2em;
     font-weight: 600;
     padding: 1em;
+}
+
+fieldset.show {
+    /* position: relative; */
+    background-color: var(--primary-000);
+    transform: none;
+    /* transform: translate(120vh) scale(1); */
+    z-index: 2;
+}
+
+fieldset.show:hover {
+    transform: none;
+}
+
+@keyframes paper-falling {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

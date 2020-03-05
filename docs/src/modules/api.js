@@ -45,7 +45,7 @@ async function getBook (id) {
 }
 
 // Search for books
-const button = document.querySelector('button');
+const button = document.querySelector('.search-button');
 
 function searchInput () {
     var searchValue = document.querySelector('input').value;
