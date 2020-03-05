@@ -156,7 +156,15 @@ fieldset label {
     margin-left: 1em;
     width: 100%;
 }
-
+fieldset:nth-of-type(2) label{
+    margin-bottom:2em;
+}
+input::placeholder{
+    opacity: .2;
+}
+input[type="text"]{
+    color:rgb(56, 75, 139);
+}
 fieldset input{
     color: var(--primary-300);
     display: block;
@@ -219,4 +227,13 @@ fieldset.show:hover {
     100% {
         transform: scale(1);
     }
+}
+textarea{
+    width: 600px;
+	height: 120px;
+	border: 2px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-position: bottom right;
+	background-repeat: no-repeat;
 }
