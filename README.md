@@ -1,4 +1,6 @@
-# Paperwork helper 
+# VerslagGever
+
+![Imgur](https://i.imgur.com/qF2BViw.png)
 
 ## Table of contents
 
