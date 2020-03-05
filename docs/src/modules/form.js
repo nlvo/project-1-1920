@@ -59,13 +59,11 @@ function createAssignment() {
     nameid.append(data.name)
     teacherid.append(data.name)
     dueid.append(data.due)
-
 }
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     createAssignment();
-
 });
 
 const next = document.querySelector('.next');
@@ -90,14 +88,13 @@ const links = document.querySelectorAll('.link');
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function() {
         const current = document.getElementsByClassName('active');
-        const currentPage = document.getElementsByClassName('active');
     
-        // If there's no active class
+        // If there's an active class
         if (current.length > 0) {
             current[0].classList.remove('active');
         }
     
-        // Add the active class to the current/clicked button
+        // Add the active class to the current/clicked link
         this.classList.add('active');
     });
 }  

@@ -7,8 +7,9 @@ function createElement (jsonData, selector) {
             `<article>
                 <img src="${item.thumbnail}">
                 <div>
-                    <a href="#${item.id}"><h2>${item.title}</h2></a>
+                    <h2>${item.title}</h2>
                     <p>${item.summaries}</p>
+                    <a class="btn-save" href="#">+ bronnenlijst</a>
                 </div>
             </article>`);
     }
@@ -39,8 +40,7 @@ function clearElement() {
 
 // render overview page
 function allBooks (data) {
-    console.log('uh')
-    // clearElement();
+    clearElement();
     createElement(data, 'books');
 }
 

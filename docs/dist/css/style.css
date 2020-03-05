@@ -47,11 +47,13 @@ nav ul li:first-child{
 }
 
 nav ul li {
+    /* flex: 1; */
     list-style-type: none;
+    align-self: center;
+    padding: 0 1em;
 }
 
-nav ul:after {
-    content: '';
+nav ul li:nth-of-type(2) {
     flex:1;
 }
 
@@ -76,7 +78,7 @@ a:active {
     display: none;
 }
 
-#home:target {
+#books:target {
     display: block;
 }
 
@@ -268,10 +270,6 @@ fieldset:not(.show):hover{
     transform: translate(6em) rotate(3deg);
 }
 
-fieldset label[for="title"] {
-    /* margin-top: 10em; */
-}
-
 #title {
     font-size: 2em;
     font-weight: 600;
@@ -287,6 +285,34 @@ fieldset.show {
 
 fieldset.show:hover {
     transform: none;
+}
+
+textarea{
+    width: 600px;
+	height: 120px;
+	border: 2px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+.btn-save {
+    background-color: var(--junior-500);
+    border: none;
+    border-radius: 0.626em;
+    color: var(--primary-000);
+    padding: 0.5em 2em;
+    line-height: 2em;
+}
+
+.btn-print {
+    background-color: var(--primary-400);
+    border: none;
+    border-radius: 0.626em;
+    color: var(--primary-000);
+    padding: 0.5em 2em;
+    line-height: 2em;
 }
 
 @keyframes paper-falling {
@@ -305,14 +331,4 @@ fieldset.show:hover {
     100% {
         transform: translate(3em) rotate(2deg);
     }
-}
-
-textarea{
-    width: 600px;
-	height: 120px;
-	border: 2px solid #cccccc;
-	padding: 5px;
-	font-family: Tahoma, sans-serif;
-	background-position: bottom right;
-	background-repeat: no-repeat;
 }

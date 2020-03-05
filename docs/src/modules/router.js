@@ -3,7 +3,7 @@ import * as form from '../modules/form'
 
 const routes = () => {
     routie({
-        'home': function () {
+        'books': function () {
             console.log('booo')
             api.getAllBooks();
         },
