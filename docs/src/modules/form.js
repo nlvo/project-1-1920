@@ -18,7 +18,6 @@ const chapter1 = document.getElementById('chapter1');
 const chapter2 = document.getElementById('chapter2');
 const chapter3 = document.getElementById('chapter3');
 const chapter4 = document.getElementById('chapter4');
-const chapter5 = document.getElementById('chapter5');
 
 
 let form = document.querySelector('form');
@@ -34,8 +33,7 @@ function inputPerson() {
         chapter1: chapter1.value,
         chapter2: chapter2.value,
         chapter3: chapter3.value,
-        chapter4: chapter4.value,
-        chapter5: chapter5.value
+        chapter4: chapter4.value
     }
     return personData
 }
