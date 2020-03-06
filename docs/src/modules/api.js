@@ -67,6 +67,14 @@ async function getSearchResults(){
 
 button.addEventListener('click', getSearchResults);
 
+const search = document.querySelector('#search-input')
+search.addEventListener('keyup', event => {
+    if(event.keyCode === 13){
+        event.preventDefault()
+        button.click()
+    }
+})
+
 export {
     getAllBooks,
     getBook,

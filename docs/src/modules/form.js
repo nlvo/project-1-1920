@@ -1,7 +1,6 @@
 import * as api from '../modules/api';
 
 const personName = document.getElementById('name');
-const personAge = document.getElementById('age');
 const personClass = document.getElementById('class');
 const teacher = document.getElementById('teacher');
 const dueDate = document.getElementById('due');
@@ -30,7 +29,6 @@ function inputPerson() {
     const book = api.findBook();
     const personData = {
         name: personName.value,
-        age: personAge.value,
         class: personClass.value,
         teacher: teacher.value,
         due: dueDate.value,

@@ -71,6 +71,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--junior-500);
+}
+
 a:active {
     color: var(--primary-900);
 }
@@ -104,6 +108,11 @@ a:active {
 #print:target + #werkstuk,
 #print:target + #home {
     display: none;
+}
+
+#werkstuk img {
+    margin: 6em 0;
+    width: 60%;
 }
 
 .books {
