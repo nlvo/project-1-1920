@@ -23,9 +23,6 @@
 					<li>
 						<a class="link werkstuk" href="#werkstuk">werkstuk maken</a>
 					</li>
-					<li>
-						<a class="link print" href="#print">print</a>
-					</li>
 				</ul>
 			</nav>
 		</header>
@@ -168,48 +165,48 @@
 	
 			</section>
 		</div>
+		<div class="page" id="werkstuk">
+			<form action="">
+				<fieldset class="show">
+					<img src="img/placeholder.png" alt="">
+					<legend class="next">Voorkant</legend>
+					<label for="title">Titel</label>
+					<input type="text" name="" id="title" placeholder="Hoe heet je werkstuk?" required>
+					<label for="name">Naam</label>
+					<input type="text" name="" id="name" placeholder="Wat is jouw naam?" required>
+					<label for="age">Leeftijd</label>
+					<input type="number" name="" id="age" placeholder="Hoe oud ben je?" required>
+					<label for="class">Klas</label>
+					<input type="text" name="" id="class" placeholder="In welke groep zit je?" required>
+					<label for="teacher">Naam juf</label>
+					<input type="text" name="" id="teacher" required>
+					<label for="due">Inlever datum</label>
+					<input type="text" name="" id="due" required>
+				</fieldset>
+		
+				<fieldset>
+					<legend class="previous">Hoofdstukken</legend>
+					<label for="intro">Inleiding</label>
+					<textarea id="intro" required> </textarea>
+					<label for="chapter1">Hoofdstuk 1: Waar gaat dit werkstuk over</label>
+					<textarea id="chapter1" name="message" required> </textarea>
+					<label for="chapter2">Hoofdstuk 2: </label>
+					<textarea id="chapter2" name="message" required> </textarea>
+					<label for="chapter3">Hoofdstuk 3</label>
+					<textarea id="chapter3" name="message" required> </textarea>
+					<label for="chapter4">Hoofdstuk 4</label>
+					<textarea id="chapter4" name="message" required> </textarea>
+					<label for="chapter5">Hoofdstuk 5</label>
+					<textarea id="chapter5" name="message" required> </textarea>
+					<button class="btn-save">opslaan</button>
+					<a class="btn-print link print" href="#print">printen</a>
+
+				</fieldset>
+			</form>
+		</div>
 		<div class="page page--active" id="home">
 			<section class="books"></section>
 		</div>
-		<div class="page" id="werkstuk">
-				<form action="">
-					<fieldset class="show">
-						<img src="img/placeholder.png" alt="">
-						<legend class="next">Voorkant</legend>
-						<label for="title">Titel</label>
-						<input type="text" name="" id="title" placeholder="Hoe heet je werkstuk?" required>
-						<label for="name">Naam</label>
-						<input type="text" name="" id="name" placeholder="Wat is jouw naam?" required>
-						<label for="age">Leeftijd</label>
-						<input type="number" name="" id="age" placeholder="Hoe oud ben je?" required>
-						<label for="class">Klas</label>
-						<input type="text" name="" id="class" placeholder="In welke groep zit je?" required>
-						<label for="teacher">Naam juf</label>
-						<input type="text" name="" id="teacher" required>
-						<label for="due">Inlever datum</label>
-						<input type="text" name="" id="due" required>
-					</fieldset>
-			
-					<fieldset>
-						<legend class="previous">Hoofdstukken</legend>
-						<label for="intro">Inleiding</label>
-						<textarea id="intro" required> </textarea>
-						<label for="chapter1">Hoofdstuk 1: Waar gaat dit werkstuk over</label>
-						<textarea id="chapter1" name="message" required> </textarea>
-						<label for="chapter2">Hoofdstuk 2: </label>
-						<textarea id="chapter2" name="message" required> </textarea>
-						<label for="chapter3">Hoofdstuk 3</label>
-						<textarea id="chapter3" name="message" required> </textarea>
-						<label for="chapter4">Hoofdstuk 4</label>
-						<textarea id="chapter4" name="message" required> </textarea>
-						<label for="chapter5">Hoofdstuk 5</label>
-						<textarea id="chapter5" name="message" required> </textarea>
-						<input class="btn-save" type="submit" value="opslaan">
-						<a class="btn-print link print" href="#print">printen</a>
-	
-					</fieldset>
-				</form>
-			</div>
 	</main>
 	<script src="js/vendor/routie.js"></script>
 	<script src="js/main.min.js"></script>

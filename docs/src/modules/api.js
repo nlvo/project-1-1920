@@ -69,5 +69,6 @@ button.addEventListener('click', getSearchResults);
 
 export {
     getAllBooks,
-    getBook
+    getBook,
+    findBook
 }
