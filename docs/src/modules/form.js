@@ -95,7 +95,9 @@ for (let i = 0; i < links.length; i++) {
             current[0].classList.remove('active');
         }
         
-        pageId(this.classList[1]);
+        pageId(this.classList);
+        console.log('blahh')
+        console.log(this)
         // Add the active class to the current/clicked link
         this.classList.add('active');
     });
@@ -105,9 +107,10 @@ function pageId(classname) {
     const pages = document.querySelectorAll('.page');
     
     for (let i = 0; i < pages.length; i++) {
+        
         const currentPage = document.getElementsByClassName('page--active');
         
-        if (pages[i].id == classname) {
+        if (classname.contains(pages[i].id)) {
             if (currentPage.length > 0) {
                 currentPage[0].classList.remove('page--active');
             }
