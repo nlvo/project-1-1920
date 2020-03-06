@@ -1,6 +1,6 @@
 # VerslagGever
 
-![Imgur](https://i.imgur.com/qF2BViw.png)
+![screenshot OBA VerslagGever](https://user-images.githubusercontent.com/8554238/76077672-72e1de80-5fa1-11ea-9cc5-b19993dd2f63.png)
 
 ## Table of contents
 
@@ -17,6 +17,10 @@ For this case OBA needed a guide or helper for young children to create assignme
 # Concept
 This project is focusing on how to help and guide children to their assignments. The goal is to create an easy workflow which the child can follow step-by-step. The endgoal is to be able to print this paperwork. 
 The prototype has a build in function that search up books for their research case. This will then be added to the document so it would be a complete paperwork.
+
+## Prototype design
+You can find our initial design down below, our goal was to create a step-by-step workflow.
+![OBA VerslagGever prototype design](https://user-images.githubusercontent.com/8554238/76077822-bf2d1e80-5fa1-11ea-93db-f3a7ea0a79fb.png)
 
 # Api
 To use this API there is a normal key and a secret key. For privacy issues the keys are hidden. If you want to use this API please contact [OBA](https://www.oba.nl/)
