@@ -12,7 +12,7 @@
 
 # Case
 OBA is a library for young and old. The library is constantly evolving to be better and user friendly. 
-For this case OBA needed a guide or helper for young children to create assignment to hand in. The problem children faces are what to write or how to set up such document. Even though the know how to operate computers it call still be frustrating if you don't know how to begin this paper work.
+For this case OBA needed a guide or helper for young children to create assignment to hand in. The problem children faces are what to write or how to set up such document. Even though they know how to operate computers it can still be frustrating if you don't know how to begin this paper work.
 
 # Concept
 This project is focusing on how to help and guide children to their assignments. The goal is to create an easy workflow which the child can follow step-by-step. The endgoal is to be able to print this paperwork. 
@@ -21,6 +21,12 @@ The prototype has a build in function that search up books for their research ca
 ## Prototype design
 You can find our initial design down below, our goal was to create a step-by-step workflow.
 ![OBA VerslagGever prototype design](https://user-images.githubusercontent.com/8554238/76077822-bf2d1e80-5fa1-11ea-93db-f3a7ea0a79fb.png)
+
+## EHBW - future plans
+[EHBW](https://manoukk.github.io/project-1-1920/)
+This application has feature to search for a book to add in a list. The list renders all the information about the book which can be use later for a source list. 
+Both concept could fit perfectly together if we had more time. 
+Also the form for filling in the chapter would be more a step-by-step guide.
 
 # Api
 To use this API there is a normal key and a secret key. For privacy issues the keys are hidden. If you want to use this API please contact [OBA](https://www.oba.nl/)
