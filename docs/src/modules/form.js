@@ -85,6 +85,7 @@ prev.addEventListener('click', prevPage);
 
 
 const links = document.querySelectorAll('.link');
+// const pages = document.querySelectorAll('.page');
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function() {
         const current = document.getElementsByClassName('active');
@@ -93,16 +94,34 @@ for (let i = 0; i < links.length; i++) {
         if (current.length > 0) {
             current[0].classList.remove('active');
         }
-    
+        
+        pageId(this.classList[1]);
         // Add the active class to the current/clicked link
         this.classList.add('active');
     });
 }  
 
+function pageId(classname) {
+    const pages = document.querySelectorAll('.page');
+    
+    for (let i = 0; i < pages.length; i++) {
+        const currentPage = document.getElementsByClassName('page--active');
+        
+        if (pages[i].id == classname) {
+            if (currentPage.length > 0) {
+                currentPage[0].classList.remove('page--active');
+            }
+            pages[i].classList.add('page--active');
+        }
+    }
+}
 
+// pageId()
 // https://www.w3schools.com/howto/howto_js_active_element.asp
 // link2.addEventListener('click', active);
-
+// if (pages[i].id == classname){
+//     pages[i].classList.add('page--active');
+// }
 export {
     createAssignment
 }

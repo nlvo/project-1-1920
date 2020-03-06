@@ -3,17 +3,14 @@ import * as form from '../modules/form'
 
 const routes = () => {
     routie({
-        'books': function () {
-            console.log('booo')
+        '': function () {
             api.getAllBooks();
         },
-        'books/:id': function (id) {
-            console.log(id)
+        'werkstuk/:id': function (id) {
             api.getBook(id);
         },
         'werkstuk' : function(){
             // form.getPerson();
-            console.log('hi')
         }
     })
 }

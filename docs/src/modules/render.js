@@ -9,7 +9,7 @@ function createElement (jsonData, selector) {
                 <div>
                     <h2>${item.title}</h2>
                     <p>${item.summaries}</p>
-                    <a class="btn-save" href="#">+ bronnenlijst</a>
+                    <a class="btn-add" href="#werkstuk/${item.id}">+ bronnenlijst</a>
                 </div>
             </article>`);
     }

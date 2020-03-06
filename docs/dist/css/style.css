@@ -78,15 +78,7 @@ a:active {
     display: none;
 }
 
-#books:target {
-    display: block;
-}
-
-#werkstuk:target {
-    display: block;
-}
-
-#print:target {
+.page.page--active {
     display: block;
 }
 
@@ -295,6 +287,14 @@ textarea{
 	font-family: Tahoma, sans-serif;
 	background-position: bottom right;
 	background-repeat: no-repeat;
+}
+
+.btn-add {
+    border: 1px solid var(--primary-400);
+    border-radius: 0.626em;
+    color: var(--primary-500);
+    padding: 0.5em 2em;
+    line-height: 2em;
 }
 
 .btn-save {
