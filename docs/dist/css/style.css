@@ -82,10 +82,14 @@ a:active {
     display: block;
 }
 
-/* #print:target + #home,
-#werkstuk:target + #home {
+#print:target {
+    display: block;
+}
+
+#print:target + #werkstuk,
+#print:target + #home {
     display: none;
-} */
+}
 
 .books {
     align-items: baseline;

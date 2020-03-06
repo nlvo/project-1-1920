@@ -2,7 +2,30 @@
     font-family: child;
     src: url(../img/ToylandNF.ttf);
 }
-
+div#print:before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 70%;
+    left: 15em;
+    height: 5em;
+    background: #cdcdcd;
+    border-radius: 2em;
+    z-index: 1;
+    box-shadow: 6px 7px 18px -1px rgba(0,0,0,0.1);
+}
+div#print:after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 62.7%;
+    left: 18.1em;
+    top: 6em;
+    height: 1em;
+    background: #464646;
+    border-radius: 2em;
+    z-index: 3;
+}
 h1 {
     font-size: 6.9em !important;
     color: #6397c9;
@@ -55,23 +78,30 @@ span {
     font-weight: 900;
 }
 .paper{
-    width:60%;
-    background:white;
-    margin:auto;
+    width: 60%;
+    background: white;
+    margin: auto;
     margin: auto;
     overflow-y: scroll;
     height: 100vh;
+    z-index: 2;
+    position: relative;
+    top: 2em;
+    box-shadow: 6px 7px 0px -1px rgba(0,0,0,0.1);
   
 }
 section.paper{
-    animation: paper 800ms ease-in-out;
+    animation: paper 2000ms ease-in-out;
+}
+main{
+    height:100vh;
 }
 @keyframes paper{
     0%{
-        transform: translate(0em, -40em);
+        height:0vh;
     }
     100%{
-        transform: translate(0em, 0em);
+        height:100vh;
     }
 }
 
