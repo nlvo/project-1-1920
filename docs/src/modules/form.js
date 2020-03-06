@@ -1,5 +1,3 @@
-import * as api from '../modules/api';
-
 const personName = document.getElementById('name');
 const personClass = document.getElementById('class');
 const teacher = document.getElementById('teacher');
@@ -26,7 +24,6 @@ const chapter5 = document.getElementById('chapter5');
 let form = document.querySelector('form');
 
 function inputPerson() {
-    const book = api.findBook();
     const personData = {
         name: personName.value,
         class: personClass.value,
@@ -34,7 +31,7 @@ function inputPerson() {
         due: dueDate.value,
         title: titleAssignment.value,
         intro: bookIntro.value,
-        chapter1: book.title,
+        chapter1: chapter1.value,
         chapter2: chapter2.value,
         chapter3: chapter3.value,
         chapter4: chapter4.value,
